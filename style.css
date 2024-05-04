@@ -1,5 +1,46 @@
+body{
+    cursor: url('./images/huo.png'), auto;
+}
+
+#title-box{
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+/* #title-box:active{
+    background-color: aliceblue;
+} */
+
+.title-line{
+    /* width: 50%; */
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+
 h1 {
     font-size: 50px;
     text-align: center;
-    font-family: cursive;
+    color: #000000;
+    font-family: Futura;
+    /* display: inline-block; */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
+
+#title-box:hover h1 {
+    color: gray;
+}
+
+/* h1:hover {
+    color: gray;
+    /* cursor: pointer; 
+    cursor: url('images/huo.png'), pointer;
+    cursor: pointer;
+} */
