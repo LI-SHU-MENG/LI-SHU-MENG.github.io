@@ -44,7 +44,12 @@ h1 {
     font-size: 50px;
     text-align: center;
     color: #000000;
-    font-family: Futura;
+    font-family: Baskerville,
+        "Baskerville Old Face",
+        "Hoefler Text",
+        Garamond,
+        "Times New Roman",
+        serif;
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
