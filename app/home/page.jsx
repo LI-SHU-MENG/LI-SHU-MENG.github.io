@@ -1,19 +1,21 @@
 'use client';
 import Logo from '@components/Logo.jsx';
 import { useState } from 'react';
+import '@styles/home.css';
+import BlurText from '@components/BlurText';
 
 export default function Home() {
         //useState
         const [hovering, setHovering] = useState(false);
 
     return (
-        <div className=" h-screen flex items-center justify-center">
-            <div className="flex items-center justify-center p-6 lg:px-8">
-                <div className="flex flex-nowrap gap-20 text-4xl">
-                    <h1 className="blur-sm hover:blur-0 p-2">Bibliography</h1>
-                    <h1 className="blur-sm hover:blur-0 p-2">Works</h1>
-                    <h1 className="blur-sm hover:blur-0 p-2">CV</h1>
-                    <h1 className="blur-sm hover:blur-0 p-2">Contact</h1>
+        <div className="h-full flex items-center justify-center flex-auto bg-white">
+            <div className="flex items-center justify-center p-8 lg:px-8">
+                <div className="flex flex-nowrap text-6xl w-70vw justify-between">
+                    <BlurText text="Bibliography" link="/biblio"/>
+                    <BlurText text="Works" link="/works"/>
+                    <BlurText text="CV" link="/cv"/>
+                    <BlurText text="Contact" link="/contact"/>
                 </div> 
             </div>
         </div>
