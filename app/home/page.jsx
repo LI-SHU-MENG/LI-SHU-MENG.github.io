@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <div className="h-full flex items-center justify-center flex-auto bg-white">
             <div className="flex items-center justify-center p-8 lg:px-8">
-                <div className="flex flex-nowrap text-6xl w-70vw justify-between">
+                <div className="text-6xl w-70vw lg:blur_grid">
                     <BlurText text="Bibliography" link="/biblio"/>
                     <BlurText text="Works" link="/works"/>
                     <BlurText text="CV" link="/cv"/>

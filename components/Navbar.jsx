@@ -11,8 +11,8 @@ const Navbar = () => {
     }
 
   return (
-    <header className="h-40 flex "> 
-          <nav className="mx-auto flex w-screen items-center justify-between p-6 lg:px-8 bg-white" aria-label="Global">
+    <header className=" flex "> 
+          <nav className="mx-auto h-64 flex w-screen items-center justify-between py-6 px-20 bg-white" aria-label="Global">
 
             <div className="h-24 w-24 text-sm"><Logo/></div> 
 

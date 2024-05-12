@@ -17,9 +17,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <div className=" h-screen content-between flex flex-col">
+                <div className="h-screen content-between flex flex-col">
                     <Navbar />
-                    <div className="flex h-full"><Sidebar active="Bibliography" /> {children}</div>
+                    <div className="h-full flex"><Sidebar active="CV" /> {children}</div>
                     <Footer />
                 </div>
             </body>
