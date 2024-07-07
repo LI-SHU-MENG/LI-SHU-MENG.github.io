@@ -45,6 +45,9 @@ module.exports = {
                 "10xl": "200px",
             }
         },
+        fontFamily: {
+            abel: ['Abel', 'sans-serif'],
+        }
     },
     plugins: [],
 };
