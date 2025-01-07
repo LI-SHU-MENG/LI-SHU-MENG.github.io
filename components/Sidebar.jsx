@@ -4,7 +4,7 @@ import BlurText from './BlurText'
 const Sidebar = ({active}) => {
     
 return (
-    <div className="w-1/4 h-full flex flex-col text-xl bg-white">
+    <div className="h-full flex flex-col text-xl bg-white">
         {active=="Bibliography" ? <BlurText text="Bibliography" link="/biblio" float={false} blur={false}/>
         : <BlurText text="Bibliography" link="/biblio" float={false} blur={true}/>}
 

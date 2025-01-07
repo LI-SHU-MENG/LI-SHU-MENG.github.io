@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 
                 <div className="content-between flex flex-col bg-white">
                     <Navbar />
-                    <div className="h-full flex">
+                    <div className="flex flex-col sm:flex-row">
                         <Sidebar active="CV" /> {children}
                     </div>
                     <Footer />
