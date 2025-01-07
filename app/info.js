@@ -39,6 +39,8 @@ const works_cn = {
 const cv_en = {
     "EDUCATION": {
         "":{
+        "2024 - 2025": "Paris, France. École Nationale Supérieure des Beaux-Arts. Art and Exhibition Professions program.",
+        "2024 - 2025": "Saclay, France. École Normale Supérieure Paris-Saclay. ARRC Diploma: research-creation.",
         "2022 - 2024": "Cergy, France  MA | DNSEP with distinction. Paris-Cergy National Graduate School of Art.",
         "2023 - 2024": "London, UK  BA(Hons) Fine Art | Exchange. Central Saint Martins - University of the Arts London.",
         "2020 - 2022": "Cergy, France  BA | DNA. Paris-Cergy National Graduate School of Art.",
@@ -49,34 +51,36 @@ const cv_en = {
 
     "EXPERIENCES": {
         "": {
-            "06/03/2023 - 30/06/2023": "Cergy, France. Paris-Cergy National Graduate School of Art. Working as an assistant in sound studio: helping students with their projects; recording and monitoring; preparing materials for workshops, etc.",
-            "06/11/2022 - 13/11/2022": "Paris, France. Paris Photo. Working as an assistant of Shanghart Gallery for Paris Photo in Grand Palais Éphémère.",
-            "26/09/2022 - 30/09/2022": "Paris, France. Palais de Tokyo. Working as a narrator  for retrospective “Jeweler Fred’s history and culture” in Paris.",
-            "11/07/2022 - 19/09/2022": "Lectoure, France. Centre d’art et de photographie de Lectoure. Exhibition preparation; assisting artists; receiving visitors; planning guided tour and educational workshops during regional summer festival.",
-            "14/05/2022": "Paris, France. Musée d’Art Moderne de Paris. Participation in project Regard • and if we talk about art for Anita Molinero's solo exhibition on European Museums Night.",
-            "10/05/2021 - 03/06/2021": "Cergy, France. Tomoko Sauvage’s Sonamphibia. Participation in Japanese electronic musician Tomoko Sauvage’s project Sonamphibia: construction of a sound installation; performance in a collaborative form of musical and choreographic experiments, participation in the making of the video documentation.",
-            "26/01/2021 - 05/03/2021": "Île Seguin, France. Insula Orchestra, Académies de la Médiation in Seine Musicale. A musical mediation project of Louise Farrenc’s Symphony nº 1, realised with the participation of two classes primary school students and two musicians: Dahlia Adamopoulos et Damien Ventula.",
-            "14/03/2020": "Paris, France. Godefroy Cavaignac Public Elemantry School. Intervention in a Chinese culture workshop in a primary school for a presentation of personal visual art project Write Your Identity (2020) and collaboration with the students for a creative interpretation of my original version of this project.",
-            "10/07/2017 - 23/07/2017": "Zhangzhou, China. AIESEC XMU. Volunteer teacher of art in a village primary school for migrant students."
+            "23/09/2024 - 07/04/2025": "101 Art & Design Center. Changle, China. Initiator and Coordinator of the Residency Project at the Festival Croisements.",
+            "06/03/2023 - 30/06/2023": "École Nationale Supérieure d’Arts de Paris-Cergy. Cergy, France. Sound Studio Monitor.",
+            "06/11/2022 - 13/11/2022": "Paris Photo. Paris, France. Gallery Manager for Shanghart Gallery.",
+            "26/09/2022 - 30/09/2022": "Palais de Tokyo. Paris, France. Exhibition Mediator for Fred Joaillerie.",
+            "11/07/2022 - 19/09/2022": "Centre d’art et de photographie de Lectoure. Lectoure, France. Mediator for the Summer Photography Festival in Lectoure.",
+            "14/05/2022             ": "Musée d’Art Moderne de Paris. Paris, France. Project Mediator for “Regard • let’s talk about art?” at the Anita Molinero exhibition during the European Night of Museums.",
+            "16/04/2022 - 22/04/2022": "Innovart Program. Buenos Aires, Argentina. Participant in a sound fiction project in both Paris and Buenos Aires.",
+            "10/05/2021 - 03/06/2021": "Tomoko Sauvage. Cergy, France. Artist Assistant for the Sonamphibia workshop.",
+            "26/01/2021 - 05/03/2021": "Insula Orchestra, La Seine Musicale. Île Seguin, France. Workshop Mediator for Symphony No. 1 by Louise Farrenc with two elementary classes.",
+            "14/03/2020             ": "École élémentaire publique Godefroy Cavaignac. Paris, France. Workshop Leader in Chinese Culture at an elementary school.",
+            "10/07/2017 - 23/07/2017": "AIESEC XMU. Zhangzhou, China. Volunteer Art Teacher in an elementary school."
         }
     },
 
-    "COLLECTIVE EXHIBITIONS": {
+    "GROUP EXHIBITIONS": {
         "": {
-            "29/03/2024": "Marseille, France. Centre international de poésie Marseille. Sound diffusion at the end of the workshop « Oreille en coin » under the direction of Éric Maillet and François Parra.",
-            "18/01/2024": "London, UK. Lethaby Gallery, Central Saint Martins. Quadraphonic performance during the exhibition Incidental Sideshow.",
-            "24/11/2023 - 30/11/2023": "London, UK. Goldsmiths, University of London. Participation in collective exposition Great Sounds Seek Silence, organized by Confucius Institute.",
-            "22/11/2023 - 24/11/2023": "London, UK. OPENing, Central Saint Martins. Participation in collective exposition Encrypted Incantations.",
-            "29/09/2023 - 01/10/2023": "Lille, France. SiencesPo Lille. Participation in collective exposition organized by AR[T}CHES association.",
-            "21/03/2023 - 26/03/2023": "Paris, France. Sonic Protest Festival. Participation in collective concert in Sonic Protest Festival.",
-            "13/10/2022 - 06/04/2023": "Saclay, France. Paris-Saclay Normal School. Participation in a collective projet (M)ondes about interactive and immersive technology in la Scène de Recherche; musical composition for TouchDesigner and multi-channel sound installation.",
-            "16/05/2022 - 22/05/2022": "Buenos Aires, Argentine. Innovart Program. Project about sonic fiction in two cities: Paris and Buenos Aires, collaboration with National University of Arts in Buenos Aires, diffusion of radio in University of la Plata, sound diffusion in Museum of la Carcova.",
-            "03/03/2022 - 11/03/2022": "Gers, France. La Peyrigne. Residency Stick, Slip, Silo in la Peyrigne, construction of a metal sound sculpture Singing Silo, exposition around silos in the village.",
-            "17/03/2022 - 27/03/2022": "Cergy, France. Points Communs-Théâtre 95. Quadraphonic sound installation Etude pour cordes (Study for Strings) in Festival Arts & Humanities.",
-            "04/10/2021 - 08/10/2021": "Nice, France. La Villa Arson. Performance in l’Orchestre Inharmonique de Nice, founded by artist Gautier Tassart, conducted by musician Lionel Fernandez and artist Elodie Lesourd. A concert was diffused on live broadcast, an album came out in 2022.",
-            "18/09/2021 - 19/00/2021": "Cergy, France. Park Anna and Gérard Philipe. During European Heritage Days, live performance Etude pour cordes with a sound installation; improvisation and interaction with audiences.",
-            "13/10/2020 - 21/05/2021": "Cergy, France. Paris-Cergy National Graduate School of Art Lieux/passerelles,entours. Participation in the multidisciplinary research project Lieux/passerelles,entours of Argentine artist Alejandra Riera, curation in the team of ten, exposition of personal sound installation Révélation (2020) and Concerto pour passerelles (2021)."
-        }
+            "08/11/2024 - 23/11/2024": "Tour Orion. Montreuil, France. La Roue De La Fortune, ENSAPC Graduates Exhibition, Class of 2024.",
+            "10/10/2024 - 07/04/2025": "101 Art & Design Center. Changle, China. Terrestrial Waves, Sino-French Croisements Festival.",
+            "29/03/2024             ": "Centre international de poésie Marseille. Marseille, France. Sound diffusion in the “Oreille en coin” workshop results.",
+            "18/01/2024             ": "Lethaby Gallery, Central Saint Martins. London, UK. Quadriphonic performance for Incidental Sideshow.",
+            "24/11/2023 - 30/11/2023": "Goldsmiths, University of London. London, UK. Great Sounds Seek Silence, Confucius Institute.",
+            "22/11/2023 - 24/11/2023": "OPENing, Central Saint Martins. London, UK. Encrypted Incantations.",
+            "29/09/2023 - 01/10/2023": "SciencesPo Lille. Lille, France. AR[T]CHES.",
+            "21/03/2023 - 26/03/2023": "Sonic Protest Festival. Paris, France. Collective concert directed by artist Anne-F Jacques.",
+            "13/10/2022 - 06/04/2023": "École Normale Supérieure Paris-Saclay. Saclay, France. Collective project (M)ondes at the Scène de Recherche.",
+            "03/03/2022 - 11/03/2022": "La Peyrigne. Gers, France. Stick, Slip, Silo Residency.",
+            "17/03/2022 - 27/03/2022": "Points Communs - Théâtre 95. Cergy, France. Sound installation Étude pour cordes in quadriphony at the Arts & Humanities Festival.",
+            "04/10/2021 - 08/10/2021": "La Villa Arson. Nice, France. L’Orchestre Inharmonique de Nice.",
+            "18/09/2021 - 19/09/2021": "Parc Anna et Gérard Philipe. Cergy, France. European Heritage Days, Étude pour cordes in performance and sound installation.",
+           
     }
 }
 
