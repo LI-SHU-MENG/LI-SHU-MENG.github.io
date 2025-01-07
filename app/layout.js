@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <div className="h-screen content-between flex flex-col">
         <Navbar />
         <div className="flex flex-col sm:flex-row">
-            {(metadata.title != "HOME") && <Sidebar active="CV"/>} 
+            <Sidebar active="CV"/>
             {children}
         </div>
         <Footer />
