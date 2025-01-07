@@ -14,34 +14,27 @@ const page = () => {
   return (
     <div className="items-center text-justify">
         <div className="p-5 text-pretty text-lg font-abel"> 
-          {Object.entries(cv).map(([key, value]) => (
+          {Object.entries(cv).map(([title, years]) => (
 
             <div className='mb-10'>
-              <h2 className='text-4xl mb-5'>{key}</h2>
+              <h2 className='text-4xl mb-5'>{title}</h2>
 
-              {(Array.isArray(value))&&(
-                value.map((line, index) => (
-                  <p key={index}>{line} <br/></p>
-                ))
-              )}
+              {Object.entries(years).map(([year, list]) => (
+                <div className='mb-5'>
+                {(year !== "") && <h3 className='text-3xl'>{year}</h3>}
 
-              {(!Array.isArray(value))&&(
-                Object.entries(value).map(([key2, value2]) => (
-                  
-                  <div className='mb-5'>
-                    <h3 className='text-3xl'>{key2}</h3>
-                    {value2.map((line, index) => (
-                      <p key={index}>{line} <br/></p>
-                    ))}
-                  </div>
-                  
-                ))
-              )}
-            
-            </div>
-
+                <grid className='mb-5 grid grid-cols-[auto,1fr] gap-x-4' >
+                  {Object.entries(list).map(([dates, line]) => (
+                    <>
+                    <p className='col-start-1'>{dates}<br/></p>
+                    <p>{line}<br/></p>
+                    </>
+                  ))}
+                </grid>
+                </div>
+              ))}
+              </div>
           ))}
-          
         </div>
     </div>
   )
