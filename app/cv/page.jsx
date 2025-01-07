@@ -1,6 +1,7 @@
 import React from 'react'
 import info from '../info.js';
 
+
 const page = () => {
 
   let cv;
@@ -10,6 +11,8 @@ const page = () => {
     case 'cn': cv = info.cv_cn; break;
     default: cv = info.cv_en; break;
   }
+
+  // console.log(GlobalConfig.lang);
     
   return (
     <div className="items-center text-justify">

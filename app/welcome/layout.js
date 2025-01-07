@@ -17,11 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-              <div className="h-screen content-between flex flex-col">
-            <Navbar />
+              {/* <div className="h-screen content-between flex flex-col">
+            <Navbar /> */}
             {children}
-            <Footer />
-        </div>
+            {/* <Footer /> */}
+        {/* </div> */}
         </body>
     </html>
   );

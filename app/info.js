@@ -25,6 +25,23 @@ Her work takes multiform, and is often site-specific, in which the soundscape em
 
 //WORKS
 const works_en = {
+    "VARIATIONS SUR TROIS VERS DE MUXIN, 2024" : {},
+    "VARIATION N°2 SUR TROIS VERS DE MUXIN, 2024": {
+        "Montreuil, France":{},
+        "Changle, Chine":{}
+    },
+    "DÉCOMPOSER LA COMPOSITION, 2024": {},
+    "THE WASTE LAND, 2024": {},
+    "WORLDS, 2024": {},
+    "FERMATA, 2023": {},
+    "DA CAPO, 2023": {},
+    "MONDES, 2023": {
+        "Saclay, France":{},
+        "Londres, Royaume-Uni":{},
+    },
+    "SECRETS, 2022": {},
+    "ÉTUDE POUR CORDES (INSTALLATION), 2022": {},
+    "ÉTUDE POUR CORDES (PERFORMANCE), 2021": {},
 }
 
 const works_fr = {
@@ -80,7 +97,7 @@ const cv_en = {
             "17/03/2022 - 27/03/2022": "Points Communs - Théâtre 95. Cergy, France. Sound installation Étude pour cordes in quadriphony at the Arts & Humanities Festival.",
             "04/10/2021 - 08/10/2021": "La Villa Arson. Nice, France. L’Orchestre Inharmonique de Nice.",
             "18/09/2021 - 19/09/2021": "Parc Anna et Gérard Philipe. Cergy, France. European Heritage Days, Étude pour cordes in performance and sound installation.",
-           
+        }
     }
 }
 
