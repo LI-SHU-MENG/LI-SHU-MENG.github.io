@@ -1,6 +1,6 @@
 let lang = "en"
 
-const works = {
+const works_en = {
 }
 
 const biography_en = `LI Shumeng, born in 1998 in China, she is a sound artist working with mixed media based in Paris. She was graduated from MA École nationale supérieure d'arts de Paris-Cergy, during which she realized an exchange in Central Saint Martins. Before studying in Fine Art, she also studied in BA Médiation Culturelle de Musiques in La Sorbonne Nouvelle. She is a sound artist working with mixed media. Her projects are exhibited in Goldsmiths University of London, Lethaby Gallery of Central Saint Martin, Scène de Recherche of ENS Paris-Saclay and SciencesPo Lille, etc. 
