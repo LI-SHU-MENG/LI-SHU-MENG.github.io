@@ -1,11 +1,16 @@
 import { Inter } from "next/font/google";
 import "@app/globals.css";
+import { i18n } from '@root/i18n-config'
 const inter = Inter({ subsets: ["latin"]});
 
 export const metadata = {
   title: "Welcome",
   description: "Portfolio of Li Shumeng",
 };
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -15,7 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"/>
       </head>
-      
+
       <body className={inter.className}>
         {children}
       </body>
