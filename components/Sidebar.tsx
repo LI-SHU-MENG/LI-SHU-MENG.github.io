@@ -9,10 +9,10 @@ export default async function Sidebar({
   dictionary: Awaited<ReturnType<typeof getDictionary>>;
 }) {
     const navItems = [
-        { text: dictionary.sidebar[0], link: "./biblio" },
-        { text: dictionary.sidebar[1], link: "./works" },
-        { text: dictionary.sidebar[2], link: "./cv" },
-        { text: dictionary.sidebar[3], link: "./contact" }
+        { text: dictionary.sidebar[0], link: "../biblio" },
+        { text: dictionary.sidebar[1], link: "../works" },
+        { text: dictionary.sidebar[2], link: "../cv" },
+        { text: dictionary.sidebar[3], link: "../contact" }
     ]
 
     return (

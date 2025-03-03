@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 const BlurText = ({text, link, float, blur}) => {
 
     const pathname = usePathname()
-    blur = !pathname.includes(link.replace("./", ""))
+    blur = !pathname.includes(link.replace("../", ""))
 
     return (
         <Link href={link}>

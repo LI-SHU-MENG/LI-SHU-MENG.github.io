@@ -1,5 +1,10 @@
 // 'use client';
 import Logo from '@components/Logo';
+import { i18n } from '@root/i18n-config'
+
+export async function generateStaticParams() {
+  return i18n.locales.map((lang) => ({ lang }))
+}
 
 export default async function Home()
 {
