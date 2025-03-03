@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "@app/globals.css";
-import { i18n } from '@root/i18n-config'
+import { i18n, type Locale } from "@root/i18n-config";
 const inter = Inter({ subsets: ["latin"]});
 
 export const metadata = {
@@ -12,9 +12,16 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({ children }) {
+export default async function RootLayout(props: {
+  children: React.ReactNode;
+  params: Promise<{ lang: Locale }>;
+}) {
+  const params = await props.params;
+
+  const { children } = props;
+
   return (
-    <html>
+    <html lang={params.lang}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
