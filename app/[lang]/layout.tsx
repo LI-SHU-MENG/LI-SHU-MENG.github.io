@@ -8,9 +8,9 @@ export const metadata = {
   description: "Portfolio of Li Shumeng",
 };
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
-}
+// export async function generateStaticParams() {
+//   return i18n.locales.map((locale) => ({ lang: locale }));
+// }
 
 export default async function RootLayout(props: {
   children: React.ReactNode;
