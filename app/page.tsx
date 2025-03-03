@@ -1,12 +1,16 @@
-'use client';
-import { redirect } from 'next/navigation';
+// 'use client';
+import Logo from '@components/Logo';
 
 export default async function Home()
 {
     //go to /welcome 
-    redirect('/en/');
+    // redirect('/welcome')
 
-    return null; // This won't be reached after redirect
+    return (
+        <div className="w-full h-screen bg-linen flex items-center justify-center">
+            <div className="w-20vw h-20vw text-3vw">
+                <Logo />
+            </div>
+        </div>
+    );
 }
-
-    
