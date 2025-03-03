@@ -2,7 +2,6 @@
 module.exports = {
     mode: "jit",
     content: [
-        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
@@ -29,21 +28,21 @@ module.exports = {
             fontSize:{
                 "3vw": "3vw"
             },
-            blur: {
-                "sm": "2px",
-                "m": "6px",
-                "l": "10px",
-                "xl": "20px",
-                "2xl": "40px",
-                "3xl": "60px",
-                "4xl": "80px",
-                "5xl": "100px",
-                "6xl": "120px",
-                "7xl": "140px",
-                "8xl": "160px",
-                "9xl": "180px",
-                "10xl": "200px",
-            }
+            // blur: {
+            //     "sm": "2px",
+            //     "m": "6px",
+            //     "l": "10px",
+            //     "xl": "20px",
+            //     "2xl": "40px",
+            //     "3xl": "60px",
+            //     "4xl": "80px",
+            //     "5xl": "100px",
+            //     "6xl": "120px",
+            //     "7xl": "140px",
+            //     "8xl": "160px",
+            //     "9xl": "180px",
+            //     "10xl": "200px",
+            // }
         },
         fontFamily: {
             abel: ['Abel', 'sans-serif'],

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from "react";
 import '@styles/logo.css';
+import Link from 'next/link';
 
 const Logo = () => {
 
@@ -16,7 +17,7 @@ const Logo = () => {
     const [hovering, setHovering] = useState(false);
 
     return (
-            <a 
+            <Link 
                 type="button" href="/home"
                 onMouseOver={()=>{setHovering(true)}}
                 onMouseLeave={()=>{setHovering(false)}}>
@@ -29,7 +30,7 @@ const Logo = () => {
                         {hovering ? SA : MENG}
                     </div>
                     </div>
-            </a>
+            </Link>
     )
 }
 
