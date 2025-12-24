@@ -11,7 +11,7 @@ export default async function Biblio(props: {
 
   return (
     <div className="bg-white items-center">
-        <div className="p-5 text-justify text-lg">
+        <div className="text-justify text-lg">
 
           {dictionary.biography.split('\n').map((line, index) => (
             <p key={index}>{line} <br/><br/></p>

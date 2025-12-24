@@ -16,15 +16,15 @@ export default async function Sidebar({
     ]
 
     return (
-        <div className="h-full flex flex-col text-xl bg-white">
+        <div className="h-full flex sm:flex-col text-xl bg-white sm:-mt-4 justify-between sm:justify-start">
             {navItems.map((item, index) => (
-                <BlurText
-                    key={item.link}
-                    text={dictionary.sidebar[index]}
-                    link={item.link}
-                    float={false}
-                    blur={true}
-                />
+            <BlurText
+                key={item.link}
+                text={dictionary.sidebar[index]}
+                link={item.link}
+                float={false}
+                blur={true}
+            />
             ))}
         </div>
     )

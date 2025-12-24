@@ -21,12 +21,12 @@ const Logo = () => {
                 type="button" href="/fr/home"
                 onMouseOver={()=>{setHovering(true)}}
                 onMouseLeave={()=>{setHovering(false)}}>
-                    <div id="title-box" className="w-full h-full cursor-pointer flex justify-between">
-                    <div className="text-center flex flex-nowrap justify-between">
+                    <div id="title-box" className="h-25 cursor-pointer flex justify-between">
+                    <div className="w-25 text-center flex flex-nowrap justify-between">
                         {hovering ? WA : LI}
-                    </div><div className="text-center flex flex-nowrap justify-between">
+                    </div><div className="w-25 text-center flex flex-nowrap justify-between">
                         {hovering ? NAI : SHU}
-                    </div><div className="text-center flex flex-nowrap justify-between">
+                    </div><div className="w-25 text-center flex flex-nowrap justify-between">
                         {hovering ? SA : MENG}
                     </div>
                     </div>

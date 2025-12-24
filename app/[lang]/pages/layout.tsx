@@ -24,9 +24,13 @@ export default async function PagesLayout(props: {
   return (
       <div className="h-screen content-between flex flex-col">
         <Navbar/>
-        <div className="flex flex-col sm:flex-row gap-10">
-            <Sidebar dictionary={dictionary}/>
-            {children}
+        <div className="flex flex-col sm:flex-row sm:gap-10">
+            <div className="px-5 sm:px-0">
+              <Sidebar dictionary={dictionary}/>
+            </div>
+            <div className="px-5 sm:px-20 w-full">
+              {children}
+            </div>
         </div>
         <Footer/>
       </div>

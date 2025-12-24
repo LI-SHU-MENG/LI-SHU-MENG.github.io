@@ -18,8 +18,8 @@ const Navbar = () => {
 
   return (
     <header className=" flex "> 
-      <nav className="mx-auto h-64 flex w-screen items-center justify-between py-6 px-20" aria-label="Global">
-        <div className="h-24 w-24 text-sm"><Logo/></div> 
+      <nav className="mx-auto flex flex-col sm:flex-row w-screen items-center justify-between py-6 px-20 sm:py-15 " aria-label="Global">
+        <div className="text-sm"><Logo/></div> 
 
           <div className='flex flex-row gap-4'>
             {/* {i18n.locales.map((locale) => {

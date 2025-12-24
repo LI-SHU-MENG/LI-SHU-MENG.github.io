@@ -11,7 +11,7 @@ export default async function CV(props: {
 
   return (
     <div className="items-center text-justify">
-        <div className="p-5 text-pretty text-lg font-abel"> 
+        <div className="text-pretty text-lg font-abel"> 
           {Object.entries(dictionary.cv).map(([title, years]) => (
 
             <div key={title} className='mb-10'>
