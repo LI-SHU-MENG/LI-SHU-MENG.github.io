@@ -18,7 +18,7 @@ const Logo = () => {
 
     return (
             <Link 
-                type="button" href="/en/home"
+                type="button" href="/fr/home"
                 onMouseOver={()=>{setHovering(true)}}
                 onMouseLeave={()=>{setHovering(false)}}>
                     <div id="title-box" className="w-full h-full cursor-pointer flex justify-between">

@@ -22,13 +22,13 @@ const Navbar = () => {
         <div className="h-24 w-24 text-sm"><Logo/></div> 
 
           <div className='flex flex-row gap-4'>
-            {i18n.locales.map((locale) => {
+            {/* {i18n.locales.map((locale) => {
               return (
                 <div key={locale}>
                   <Link href={redirectedPathname(locale)}>{locale.toUpperCase()}</Link>
                 </div>
               );
-            })}
+            })} */}
           </div>
 
     </nav>
