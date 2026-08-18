@@ -25,7 +25,16 @@ const Navbar = () => {
             {i18n.locales.map((locale) => {
               return (
                 <div key={locale}>
-                  <Link href={redirectedPathname(locale)}>{locale === 'cn' ? '中' : locale.toUpperCase()}</Link>
+                  <Link
+  href={redirectedPathname(locale)}
+  className={`transition-all duration-300 ${
+    pathname.startsWith(`/${locale}`)
+      ? 'blur-0'
+      : 'blur-[1.5px] hover:blur-0'
+  }`}
+>
+  {locale === 'cn' ? '中' : locale.toUpperCase()}
+</Link>
                 </div>
               );
             })}
