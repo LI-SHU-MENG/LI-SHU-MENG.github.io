@@ -10,8 +10,8 @@ export default async function Home(props: {
   const dictionary = await getDictionary(lang);
 
     return (
-        <div className="h-full flex items-center justify-center flex-auto bg-white">
-            <div className="flex items-center justify-center p-8 lg:px-8">
+        <div className="min-h-screen flex items-center justify-center bg-white pt-[180px]">
+            <div className="flex w-full items-center justify-center p-8 lg:px-8">
                 <div className="text-6xl w-70vw lg:blur_grid">
                     <BlurText text={dictionary.sidebar[0]} link="../pages/biblio" float={true} blur={true}/>
                     <BlurText text={dictionary.sidebar[1]} link="../pages/works" float={true} blur={true}/>
