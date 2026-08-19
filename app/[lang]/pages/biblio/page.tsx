@@ -11,10 +11,10 @@ export default async function Biblio(props: {
 
   return (
     <div className="w-full pr-4 pb-0 pt-[220px] sm:pr-8">
-      <div className="flex w-full max-w-[1700px] flex-col gap-8 md:flex-row md:items-start md:justify-start md:gap-6">
+      <div className="mx-auto flex w-full max-w-[1080px] flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-16">
 
         {/* Portrait */}
-        <div className="w-full md:w-[72%] md:-translate-x-20">
+        <div className="w-full md:w-[46%] md:ml-16 md:translate-y-10">
           <Image
             src="/portrait.jpg"
             alt="Shumeng Li"
