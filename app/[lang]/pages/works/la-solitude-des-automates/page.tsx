@@ -1,4 +1,5 @@
 import React from 'react'
+import PanoramicViewer from '@components/PanoramicViewer'
 
 type Lang = 'en' | 'fr' | 'cn'
 
@@ -93,7 +94,37 @@ export default async function LaSolitudeDesAutomatesPage({
   const { lang } = await params
   const t = content[lang] ?? content.en
 
-  return (
+  
+
+  const photography = {
+    en: {
+      section: 'Photography',
+      series: 'Photographic series · 2025',
+      medium1: 'Digital photography · 2025',
+      medium2: 'Panoramic digital photography · 2025',
+      description: `Developed alongside the moving-image work La Solitude des Automates, these photographs turn toward the industrial space itself. Made inside an automated textile factory in Changle, China, the series shifts attention from production toward architecture, artificial light, repetition and absence. Rather than presenting automation as a dystopian spectacle, the photographs observe how it reorganises space, perception and human presence.`,
+      installation: 'Installation view, PhotoSaintGermain 2025, Beaux-Arts de Paris',
+    },
+    fr: {
+      section: 'Photographie',
+      series: 'Série photographique · 2025',
+      medium1: 'Photographie numérique · 2025',
+      medium2: 'Photographie panoramique numérique · 2025',
+      description: `Développées parallèlement au film La Solitude des Automates, ces photographies se tournent vers l’espace industriel lui-même. Réalisée dans une usine textile automatisée à Changle, en Chine, la série déplace le regard de la production vers l’architecture, la lumière artificielle, la répétition et l’absence. Plutôt que de présenter l’automatisation comme un spectacle dystopique, les images observent la manière dont elle reconfigure l’espace, la perception et la présence humaine.`,
+      installation: 'Vue d’installation, PhotoSaintGermain 2025, Beaux-Arts de Paris',
+    },
+    zh: {
+      section: '摄影',
+      series: '摄影系列 · 2025',
+      medium1: '数码摄影 · 2025',
+      medium2: '全景数码摄影 · 2025',
+      description: `这组摄影作品与影像作品 La Solitude des Automates 平行发展，将视线进一步转向工业空间本身。作品拍摄于中国长乐的一座自动化纺织工厂，关注点从生产过程转向建筑、人工光线、重复结构与人的缺席。作品并不将自动化简单处理为一种反乌托邦景观，而是观察它如何重新组织空间、感知与人的在场。`,
+      installation: '展览现场，PhotoSaintGermain 2025，Beaux-Arts de Paris',
+    },
+  } as const
+
+  const p = photography[lang] ?? photography.en
+return (
     <main className="min-h-screen bg-white px-6 pb-32 pt-[220px] md:px-10">
       <div className="mx-auto max-w-[1180px]">
 
@@ -166,7 +197,81 @@ export default async function LaSolitudeDesAutomatesPage({
           </div>
         </section>
 
-        <section>
+        
+      <section className="mb-40">
+        <div className="mb-16 text-[11px] uppercase tracking-[0.14em] text-[#0F02E6]">
+          {p.section}
+        </div>
+
+        <div className="mb-28">
+          <div className="relative">
+            <img
+              src="/la-solitude-photography-01.jpg"
+              alt="La Solitude des Automates I"
+              className="w-full"
+            />
+
+            <div className="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.12em] text-[#0F02E6]">
+              PhotoSaintGermain 2025
+            </div>
+          </div>
+
+          <div className="mt-4">
+            <div className="text-[17px] italic">
+              La Solitude des Automates I
+            </div>
+            <div className="mt-1 text-[12px]">
+              {p.medium1}
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-32 grid grid-cols-1 gap-12 md:grid-cols-[220px_1fr] md:gap-24">
+          <div className="text-[11px] uppercase tracking-[0.14em] text-[#0F02E6]">
+            {p.series}
+          </div>
+
+          <div className="max-w-[720px] text-justify text-[17px] leading-[1.55]">
+            <p>
+              <ItalicizeWorkTitle text={p.description} />
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-32">
+          <div className="mb-5">
+            <div className="text-[17px] italic">
+              La Solitude des Automates II
+            </div>
+            <div className="mt-1 text-[12px]">
+              {p.medium2}
+            </div>
+          </div>
+
+          <PanoramicViewer
+            src="/la-solitude-panorama.jpg"
+            alt="La Solitude des Automates II"
+          />
+
+          <div className="mt-3 text-right text-[10px] uppercase tracking-[0.12em] text-[#0F02E6]">
+            PhotoSaintGermain 2025
+          </div>
+        </div>
+
+        <figure>
+          <img
+            src="/la-solitude-installation-view-01.jpg"
+            alt={p.installation}
+            className="w-full"
+          />
+
+          <figcaption className="mt-3 text-[11px] text-black/35">
+            {p.installation}
+          </figcaption>
+        </figure>
+      </section>
+
+<section>
           <div className="mb-16 text-[11px] uppercase tracking-[0.14em] text-[#0F02E6]">
             {t.installation}
           </div>

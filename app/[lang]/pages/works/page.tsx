@@ -3,12 +3,27 @@
 import Link from 'next/link'
 import { use, useMemo, useState } from 'react'
 
-type Category = 'all' | 'sound' | 'image' | 'installation'
+type Category = 'all' | 'sound' | 'image' | 'installation' | 'performance'
 
 type Work = {
   year: string
   title: string
   subtitle: string
+  translation?: {
+    en: string
+    fr: string
+    cn: string
+  }
+  localizedSubtitle?: {
+    en: string
+    fr: string
+    cn: string
+  }
+  localizedTags?: {
+    en: string[]
+    fr: string[]
+    cn: string[]
+  }
   slug: string
   categories: Exclude<Category, 'all'>[]
   tags: string[]
@@ -19,11 +34,50 @@ const works: Work[] = [
   {
     year: '2025',
     title: 'La Solitude des Automates',
-    subtitle: 'The Solitude of Automata',
+    subtitle: 'Moving Image · 2025',
+    translation: {
+      en: 'The Solitude of Automata',
+      fr: '',
+      cn: '机械孤独',
+    },
+    localizedSubtitle: {
+      en: 'Moving Image · 2025',
+      fr: 'Image en mouvement · 2025',
+      cn: '动态影像 · 2025',
+    },
+    localizedTags: {
+      en: ['Moving Image', 'Sound', 'Film'],
+      fr: ['Image en mouvement', 'Son', 'Film'],
+      cn: ['动态影像', '声音', '影像'],
+    },
     slug: 'la-solitude-des-automates',
     categories: ['image', 'sound'],
     tags: ['Moving Image', 'Sound', 'Film'],
     image: '/la-solitude-des-automates.jpg',
+  },
+  {
+    year: '2025',
+    title: 'La Solitude des Automates',
+    subtitle: 'Photography · 2025',
+    translation: {
+      en: 'The Solitude of Automata',
+      fr: '',
+      cn: '机械孤独',
+    },
+    localizedSubtitle: {
+      en: 'Photography · 2025',
+      fr: 'Photographie · 2025',
+      cn: '摄影 · 2025',
+    },
+    localizedTags: {
+      en: ['Photography', 'Series'],
+      fr: ['Photographie', 'Série'],
+      cn: ['摄影', '系列'],
+    },
+    slug: 'la-solitude-des-automates-photography',
+    categories: ['image'],
+    tags: ['Photography', 'Series'],
+    image: '/la-solitude-photography-01.jpg',
   },
 ]
 
@@ -34,6 +88,8 @@ const labels = {
     sound: 'Sound',
     image: 'Image',
     installation: 'Installation',
+      performance: 'Performance',
+      performance: 'Performance',
   },
   fr: {
     heading: 'Œuvres',
@@ -48,6 +104,7 @@ const labels = {
     sound: '声音',
     image: '影像',
     installation: '装置',
+      performance: '表演',
   },
 }
 
@@ -64,6 +121,7 @@ export default function WorksPage({
     'sound',
     'image',
     'installation',
+    'performance',
   ]
 
   const filteredWorks = useMemo(() => {
@@ -104,14 +162,14 @@ export default function WorksPage({
                 href={`/${lang}/pages/works/${work.slug}`}
                 className="group block"
               >
-                <article>
+                <article className="mb-28 md:mb-52">
                   <div className="mb-8 flex items-start justify-between gap-6">
                     <div className="font-mono text-[11px] text-black/40">
                       {work.year}
                     </div>
 
                     <div className="flex flex-wrap justify-end gap-x-3 text-[11px] text-black/40">
-                      {work.tags.map((tag) => (
+                      {(work.localizedTags?.[lang] ?? work.tags).map((tag) => (
                         <span key={tag}>{tag}</span>
                       ))}
                     </div>
@@ -129,8 +187,15 @@ export default function WorksPage({
                     des Automates
                   </h2>
 
-                  <p className="mt-7 text-[16px] italic text-black/55">
-                    {work.subtitle}
+                  
+          {work.translation?.[lang] && (
+            <p className="mt-5 text-[18px] italic text-black/45">
+              {work.translation[lang]}
+            </p>
+          )}
+
+          <p className="mt-7 text-[16px] italic text-black/55">
+                    {work.localizedSubtitle?.[lang] ?? work.subtitle}
                   </p>
 
                   <div className="mt-10 overflow-hidden">

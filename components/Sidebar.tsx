@@ -46,8 +46,15 @@ const Sidebar = ({ dictionary }: { dictionary: any }) => {
         }`}
     >
       {navItems.map((item) => {
+        const normalizedPath = pathname?.replace(/\/$/, '')
+        const normalizedLink = item.link.replace(/\/$/, '')
+
         const active =
-          pathname?.replace(/\/$/, '') === item.link.replace(/\/$/, '')
+          normalizedPath === normalizedLink ||
+          (
+            normalizedLink.endsWith('/pages/works') &&
+            normalizedPath?.startsWith(`${normalizedLink}/`)
+          )
 
         return (
           <Link
