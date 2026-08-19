@@ -29,7 +29,11 @@ export default async function Biblio(props: {
         </div>
 
         {/* Biography */}
-        <div className="w-full text-justify text-lg leading-[1.42] md:w-[32%] md:flex-none md:pt-[29em]">
+        <div
+          className={`w-full text-justify text-lg leading-[1.42] md:w-[32%] md:flex-none ${
+            lang === 'fr' ? 'md:pt-[27.5em]' : 'md:pt-[29em]'
+          }`}
+        >
           {dictionary.biography
             .split('\n')
             .filter(Boolean)

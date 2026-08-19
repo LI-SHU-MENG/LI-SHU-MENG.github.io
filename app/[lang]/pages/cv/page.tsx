@@ -399,9 +399,7 @@ export default function CVPage({
     <main className="min-h-screen bg-white px-6 pb-28 pt-[220px] md:px-10">
       <div className="mx-auto max-w-[1180px]">
 
-        <div className="mb-16 text-[11px] uppercase tracking-[0.18em] text-black/40">
-          Selected CV
-        </div>
+        
 
         <div className="grid grid-cols-1 gap-14 md:grid-cols-[230px_1fr] md:gap-24">
 
@@ -423,7 +421,11 @@ export default function CVPage({
 
           <section>
             <h1
-              className="text-[clamp(3.8rem,6.5vw,6.8rem)] font-bold leading-[0.82] tracking-[-0.065em] text-[#0F02E6]"
+              className={`text-[clamp(3.8rem,6.5vw,6.8rem)] font-bold tracking-[-0.065em] text-[#0F02E6] ${
+                lang === 'cn'
+                  ? 'relative top-3 leading-[1]'
+                  : 'leading-[0.82]'
+              }`}
               style={{
                 fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif',
                 width: '100%',
