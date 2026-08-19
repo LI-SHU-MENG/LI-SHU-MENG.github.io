@@ -1,9 +1,13 @@
 {
-  
-  "sidebar" : ["Biographie", "Travaux", "CV", "Contact"],
-  "biography" : "LI Shumeng, née en 1998 en Chine, est une artiste sonore travaillant avec des techniques mixtes et basée à Paris. Elle est diplômée d'un master de l'École nationale supérieure d'arts de Paris-Cergy, au cours duquel elle a effectué un échange à Central Saint Martins. Avant d'étudier les beaux-arts, elle a également suivi un cursus de licence en médiation culturelle musicale à la Sorbonne Nouvelle. Elle est une artiste sonore travaillant avec des techniques mixtes. Ses projets sont exposés à la Goldsmiths University de Londres, à la Lethaby Gallery de Central Saint Martin, à la Scène de Recherche de l'ENS Paris-Saclay et à SciencesPo Lille, etc. Grâce à son expérience interculturelle, elle questionne le concept de « norme » et la façon dont les gens le perçoivent dans son travail. Elle utilise le son comme matériau central de sa recherche artistique, comme une manière personnelle d'aborder le monde, en explorant la matérialité du son. Ce processus révèle de nouvelles réalités. Elle s'intéresse également à la notion de « composition ». Dans ce cas, elle construit son travail sonore de manière déconstructive, en expérimentant l'enregistrement sur le terrain, l'improvisation vocale et instrumentale et l'écriture créative pour questionner les modes d'écoute. Son travail prend des formes multiples et est souvent spécifique à un lieu, dans lequel le paysage sonore émerge en combinaison avec une technologie immersive et des éléments visuels : vidéo, peinture et sculpture. Elle réalise également des performances en direct dans le cadre de son installation sonore, où elle laisse au public la liberté de composer sa propre expérience d'écoute.",
-
-  "works" : {
+  "sidebar": [
+    "Biographie",
+    "Travaux",
+    "CV",
+    "Médias",
+    "Contact"
+  ],
+  "biography": "Shumeng Li, née en 1998 en Chine, vit et travaille à Paris.\n\nLe son constitue son point de départ en tant que médium artistique, et la composition continue de structurer sa manière de développer les idées, d’organiser le temps et de construire des relations entre image, espace et perception.\n\nDepuis une perspective internationale, elle s’intéresse aux transformations urbaines et industrielles de la Chine, avec une attention particulière portée aux mutations de l’architecture, des modes de production et des paysages du quotidien dans sa région natale du Fujian. Son travail explore la manière dont les changements technologiques et sociaux reconfigurent la mémoire collective, les identités locales et les expériences du lieu, en faisant apparaître la solitude, la résilience et la singularité culturelle qui accompagnent les périodes de transition.\n\nDiplômée de l’École nationale supérieure d’arts de Paris-Cergy (ENSAPC), Shumeng Li a également suivi le programme post-diplôme FAME aux Beaux-Arts de Paris. Sa pratique s’est développée à travers des contextes de recherche à l’École normale supérieure Paris-Saclay ainsi qu’au cours de ses études à Central Saint Martins, University of the Arts London.",
+  "works": {
     "VARIATIONS SUR TROIS VERS DE MUXIN, 2024": {},
     "VARIATION N°2 SUR TROIS VERS DE MUXIN, 2024": {
       "Montreuil, France": {},
@@ -22,8 +26,7 @@
     "ÉTUDE POUR CORDES (INSTALLATION), 2022": {},
     "ÉTUDE POUR CORDES (PERFORMANCE), 2021": {}
   },
-
-  "cv" : {
+  "cv": {
     "EDUCATION": {
       "": {
         "2024 - 2025": "Paris, France. École Nationale Supérieure des Beaux-Arts. Art and Exhibition Professions program.",
@@ -68,5 +71,4 @@
       }
     }
   }
-
 }

@@ -2,22 +2,21 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <header className="flex "> 
-          <nav className="mx-auto h-64 flex w-screen items-center justify-end p-6 lg:px-8 bg-white" aria-label="Global">
-
-
-            <div className="gap-4 text-xs self-end text-end"> 
-                <div>©2024 LI Shumeng</div>
-                <div>Design: LI Shumeng</div>
-                <div>Development:
-                  <a className="animate-pulse text-blue-600 hover:text-blue-400 ml-1" href="https://mrvny.github.io/#/home">
-                    Qingyuan
-                  </a>
-                </div>
-        </div> 
-
-        </nav>
-    </header>
+    <footer className="mt-24 w-full bg-white py-6 text-center text-xs leading-relaxed">
+      <div>© 2026 LI Shumeng</div>
+      <div>Design: Shumeng</div>
+      <div>
+        Development:{' '}
+        <a
+          href="https://mrvny.github.io/#/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black transition-all duration-200 hover:text-black/50 hover:underline"
+        >
+          Qingyuan ↗
+        </a>
+      </div>
+    </footer>
   )
 }
 

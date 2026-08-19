@@ -14,22 +14,19 @@ export default async function Biblio(props: {
       <div className="flex w-full max-w-[1700px] flex-col gap-8 md:flex-row md:items-start md:justify-start md:gap-6">
 
         {/* Portrait */}
-        <div className="w-full md:w-[72%] md:-translate-x-20">
+        <div className="w-full md:w-[72%] md:-translate-x-20 md:translate-y-10">
           <Image
             src="/portrait.jpg"
             alt="Shumeng Li"
             width={1600}
             height={2400}
-            className="h-auto w-full -translate-y-6 object-contain object-left-top md:-translate-y-24"
+            className="h-auto w-full object-contain object-left-top"
             priority
-            quality={100}
-            sizes="(min-width: 768px) 72vw, 100vw"
-            style={{ imageRendering: "auto" }}
           />
         </div>
 
         {/* Biography */}
-        <div className="w-full text-justify text-lg leading-[1.42] md:w-[32%] md:flex-none md:pt-[29em]">
+        <div className="w-full text-justify text-lg leading-[1.42] md:w-[32%] md:flex-none md:pt-[20em]">
           {dictionary.biography
             .split('\n')
             .filter(Boolean)

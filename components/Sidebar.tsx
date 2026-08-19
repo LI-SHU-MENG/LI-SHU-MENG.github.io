@@ -31,12 +31,13 @@ const Sidebar = ({ dictionary }: { dictionary: any }) => {
     { text: dictionary.sidebar[0], link: `/${lang}/pages/biblio` },
     { text: dictionary.sidebar[1], link: `/${lang}/pages/works` },
     { text: dictionary.sidebar[2], link: `/${lang}/pages/cv` },
-    { text: dictionary.sidebar[3], link: `/${lang}/pages/contact` },
+    { text: dictionary.sidebar[3], link: `/${lang}/pages/media` },
+    { text: dictionary.sidebar[4], link: `/${lang}/pages/contact` },
   ]
 
   return (
     <div
-      className={`fixed left-12 top-[110px] z-50 flex -translate-y-1/2 flex-row items-center gap-6 whitespace-nowrap text-xl
+      className={`fixed left-12 top-[110px] z-50 flex -translate-y-1/2 w-[400px] flex-row items-center justify-between whitespace-nowrap \${menuSize}
         transition-all duration-500
         ${
           showControls
@@ -55,7 +56,7 @@ const Sidebar = ({ dictionary }: { dictionary: any }) => {
             className={`transition-all duration-300 ${
               active
                 ? 'blur-0'
-                : 'blur-[3.6px] hover:blur-0'
+                : 'blur-[2.4px] hover:blur-0'
             }`}
           >
             {item.text}

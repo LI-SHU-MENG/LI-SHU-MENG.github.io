@@ -6,6 +6,7 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import Sidebar from "@components/Sidebar";
 
+
 export const metadata = {
   title: "Li Shumeng",
   description: "Portfolio of Li Shumeng",
@@ -17,21 +18,21 @@ export default async function PagesLayout(props: {
 }) {
   const { lang } = await props.params;
   const dictionary = await getDictionary(lang);
+
   const { children } = props;
 
   return (
-    <div className="min-h-screen w-full bg-white flex flex-col">
-      <Navbar />
-
-      <div className="flex-1 w-full">
-        <Sidebar dictionary={dictionary} />
-
-        <main className="w-full">
-          {children}
-        </main>
+      <div className="h-screen content-between flex flex-col">
+        <Navbar/>
+        <div className="flex flex-col sm:flex-row sm:gap-10">
+            <div className="px-5 sm:px-0">
+              <Sidebar dictionary={dictionary}/>
+            </div>
+            <div className="px-5 sm:px-20 w-full">
+              {children}
+            </div>
+        </div>
+        <Footer/>
       </div>
-
-      <Footer />
-    </div>
   );
 }
