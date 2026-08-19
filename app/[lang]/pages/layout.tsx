@@ -5,6 +5,7 @@ import { Locale } from "@root/i18n-config";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import Sidebar from "@components/Sidebar";
+import ScrollFade from "@components/ScrollFade";
 
 export const metadata = {
   title: "Li Shumeng",
@@ -21,10 +22,14 @@ export default async function PagesLayout(props: {
 
   return (
     <div className="min-h-screen w-full bg-white flex flex-col">
-      <Navbar />
+      <ScrollFade>
+        <Navbar />
+      </ScrollFade>
 
       <div className="flex-1 w-full">
-        <Sidebar dictionary={dictionary} />
+        <ScrollFade>
+          <Sidebar dictionary={dictionary} />
+        </ScrollFade>
 
         <main className="w-full">
           {children}
