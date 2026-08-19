@@ -5,11 +5,11 @@ import { useRef, useState } from 'react'
 export default function PanoramicViewer({
   src,
   alt,
-  exploreLabel,
+  exploreLabel = 'DRAG TO EXPLORE →',
 }: {
   src: string
   alt: string
-  exploreLabel: string
+  exploreLabel?: string
 }) {
   const ref = useRef<HTMLDivElement>(null)
 

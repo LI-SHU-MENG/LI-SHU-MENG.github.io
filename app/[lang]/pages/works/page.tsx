@@ -89,7 +89,7 @@ const labels = {
     image: 'Image',
     installation: 'Installation',
       performance: 'Performance',
-      performance: 'Performance',
+      
   },
   fr: {
     heading: 'Œuvres',
@@ -97,6 +97,7 @@ const labels = {
     sound: 'Son',
     image: 'Image',
     installation: 'Installation',
+      performance: 'Performance',
   },
   cn: {
     heading: '作品',
