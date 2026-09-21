@@ -60,12 +60,12 @@ const Navbar = ({ dictionary, showNav = true }: { dictionary: any; showNav?: boo
           : '-translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <div className="mx-auto flex h-[184px] w-full flex-col bg-white px-3 sm:px-6 md:px-10">
-        <div className="flex h-[126px] shrink-0 items-center justify-center overflow-hidden">
+      <div className="mx-auto flex h-[252px] w-full flex-col bg-white px-3 sm:px-6 md:px-10">
+        <div className="flex h-[158px] shrink-0 items-start justify-center overflow-hidden pt-[26px]">
           <Logo variant="header" />
         </div>
 
-        <div className="flex h-[58px] min-w-0 items-center justify-between gap-3 pb-3 text-[10px] sm:gap-6 sm:text-[12px] md:text-[13px]">
+        <div className="flex h-[94px] min-w-0 items-start justify-between gap-3 pt-[20px] pb-[34px] text-[10px] sm:gap-6 sm:text-[12px] md:text-[13px]">
           {showNav ? (
           <nav
             className="flex min-w-0 items-baseline gap-3 overflow-x-auto whitespace-nowrap sm:gap-4 md:gap-6"
