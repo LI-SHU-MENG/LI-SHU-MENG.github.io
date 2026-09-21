@@ -396,7 +396,7 @@ export default function CVPage({
   ]
 
   return (
-    <main className="min-h-screen bg-white px-6 pb-28 pt-[220px] md:px-10">
+    <main className="min-h-screen bg-white px-6 pb-28 pt-[320px] md:px-10">
       <div className="mx-auto max-w-[1180px]">
 
         
