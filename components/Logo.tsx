@@ -4,8 +4,7 @@ import '@styles/logo.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const Logo = () => {
-
+const Logo = ({ variant = 'landing' }: { variant?: 'landing' | 'header' }) => {
     const pathname = usePathname();
     const lang = pathname?.split('/')[1] || 'fr';
 
@@ -17,24 +16,31 @@ const Logo = () => {
     const NAI = <><h1>N</h1><h1>A</h1><h1>I</h1></>;
     const SA = <><h1>S</h1><h1>A</h1></>;
 
-    //usestate
     const [hovering, setHovering] = useState(false);
 
+    const titleClass = variant === 'landing'
+        ? 'h-25 cursor-pointer flex justify-between'
+        : 'flex h-20 scale-[0.72] cursor-pointer justify-between text-[13px] sm:h-[84px] sm:text-sm';
+
     return (
-            <Link 
-                type="button" href={`/${lang}/home`}
-                onMouseOver={()=>{setHovering(true)}}
-                onMouseLeave={()=>{setHovering(false)}}>
-                    <div id="title-box" className="flex h-20 scale-[0.72] cursor-pointer justify-between text-[13px] sm:h-[84px] sm:text-sm">
-                    <div className="w-25 text-center flex flex-nowrap justify-between">
-                        {hovering ? WA : LI}
-                    </div><div className="w-25 text-center flex flex-nowrap justify-between">
-                        {hovering ? NAI : SHU}
-                    </div><div className="w-25 text-center flex flex-nowrap justify-between">
-                        {hovering ? SA : MENG}
-                    </div>
-                    </div>
-            </Link>
+        <Link
+            type="button"
+            href={`/${lang}/home`}
+            onMouseOver={() => setHovering(true)}
+            onMouseLeave={() => setHovering(false)}
+        >
+            <div id="title-box" className={titleClass}>
+                <div className="w-25 text-center flex flex-nowrap justify-between">
+                    {hovering ? WA : LI}
+                </div>
+                <div className="w-25 text-center flex flex-nowrap justify-between">
+                    {hovering ? NAI : SHU}
+                </div>
+                <div className="w-25 text-center flex flex-nowrap justify-between">
+                    {hovering ? SA : MENG}
+                </div>
+            </div>
+        </Link>
     )
 }
 
