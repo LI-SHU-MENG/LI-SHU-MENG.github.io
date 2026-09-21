@@ -2,8 +2,12 @@
 import { useState } from "react";
 import '@styles/logo.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Logo = () => {
+
+    const pathname = usePathname();
+    const lang = pathname?.split('/')[1] || 'fr';
 
     const LI = <><h1>L</h1><h1>I</h1></>;
     const SHU = <><h1>S</h1><h1>H</h1><h1>U</h1></>;
@@ -18,10 +22,10 @@ const Logo = () => {
 
     return (
             <Link 
-                type="button" href="/fr/home"
+                type="button" href={`/${lang}/home`}
                 onMouseOver={()=>{setHovering(true)}}
                 onMouseLeave={()=>{setHovering(false)}}>
-                    <div id="title-box" className="h-25 cursor-pointer flex justify-between">
+                    <div id="title-box" className="flex h-20 scale-[0.72] cursor-pointer justify-between text-[13px] sm:h-[84px] sm:text-sm">
                     <div className="w-25 text-center flex flex-nowrap justify-between">
                         {hovering ? WA : LI}
                     </div><div className="w-25 text-center flex flex-nowrap justify-between">
