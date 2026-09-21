@@ -44,7 +44,7 @@ export default async function CompositionPage({
   const t = content[lang] ?? content.en
 
   return (
-    <main className="min-h-screen bg-white px-6 pb-32 pt-[220px] md:px-10">
+    <main className="min-h-screen bg-white px-6 pb-32 pt-[320px] md:px-10">
       <div className="mx-auto max-w-[1180px]">
         <header className="mb-16 md:mb-24">
           <h1
