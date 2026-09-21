@@ -18,9 +18,12 @@ const Logo = ({ variant = 'landing' }: { variant?: 'landing' | 'header' }) => {
 
     const [hovering, setHovering] = useState(false);
 
-    const titleClass = variant === 'landing'
-        ? 'h-25 cursor-pointer flex justify-between'
-        : 'flex h-20 scale-[0.72] cursor-pointer justify-between text-[13px] sm:h-[84px] sm:text-sm';
+    const isLanding = variant === 'landing';
+    const titleClass = isLanding
+        ? 'flex h-[20vw] w-[20vw] min-h-[150px] min-w-[150px] max-h-[260px] max-w-[260px] cursor-pointer flex-col justify-between text-[clamp(24px,3vw,44px)]'
+        : 'flex h-[84px] w-[96px] scale-[0.72] cursor-pointer flex-col justify-between text-[13px] sm:text-sm';
+
+    const rowClass = 'flex w-full flex-nowrap justify-between text-center';
 
     return (
         <Link
@@ -28,17 +31,12 @@ const Logo = ({ variant = 'landing' }: { variant?: 'landing' | 'header' }) => {
             href={`/${lang}/home`}
             onMouseOver={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
+            className="inline-block"
         >
             <div id="title-box" className={titleClass}>
-                <div className="w-25 text-center flex flex-nowrap justify-between">
-                    {hovering ? WA : LI}
-                </div>
-                <div className="w-25 text-center flex flex-nowrap justify-between">
-                    {hovering ? NAI : SHU}
-                </div>
-                <div className="w-25 text-center flex flex-nowrap justify-between">
-                    {hovering ? SA : MENG}
-                </div>
+                <div className={rowClass}>{hovering ? WA : LI}</div>
+                <div className={rowClass}>{hovering ? NAI : SHU}</div>
+                <div className={rowClass}>{hovering ? SA : MENG}</div>
             </div>
         </Link>
     )
