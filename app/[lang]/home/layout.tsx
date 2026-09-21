@@ -18,7 +18,7 @@ export default async function HomeLayout(props: {
 
   return (
     <div className="h-screen content-between flex flex-col">
-      <Navbar dictionary={dictionary} />
+      <Navbar dictionary={dictionary} showNav={false} />
       {props.children}
       <Footer />
     </div>
