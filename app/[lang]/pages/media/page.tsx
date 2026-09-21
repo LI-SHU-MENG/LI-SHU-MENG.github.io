@@ -38,7 +38,7 @@ export default async function MediaPage({
   const t = content[lang] ?? content.en
 
   return (
-    <main className="min-h-screen bg-white px-8 pb-24 pt-[240px]">
+    <main className="min-h-screen bg-white px-8 pb-24 pt-[320px]">
       <section className="mx-auto max-w-[1180px]">
         <article className="grid grid-cols-1 gap-16 md:grid-cols-[180px_1fr] md:gap-20">
 
