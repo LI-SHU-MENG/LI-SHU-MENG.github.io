@@ -17,7 +17,7 @@ export default async function Home(props: {
                         lang === 'fr'
                             ? 'text-[clamp(2.2rem,3.1vw,3.4rem)]'
                             : lang === 'en'
-                                ? 'text-[clamp(2.6rem,3.6vw,4rem)]'
+                                ? 'text-[clamp(1.9rem,2.65vw,3rem)]'
                                 : 'text-6xl'
                     }`}
                 >
