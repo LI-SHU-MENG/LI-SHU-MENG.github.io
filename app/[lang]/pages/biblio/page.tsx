@@ -10,7 +10,7 @@ export default async function Biblio(props: {
   const dictionary = await getDictionary(lang)
 
   return (
-    <div className="w-full pr-4 pb-0 pt-[220px] sm:pr-8">
+    <div className="w-full pr-4 pb-0 pt-[320px] sm:pr-8">
       <div className="mx-auto flex w-full max-w-[1080px] flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-16">
 
         {/* Portrait */}
