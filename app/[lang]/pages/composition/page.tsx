@@ -61,60 +61,49 @@ export default async function CompositionPage({
           </div>
         </header>
 
-        <div className="grid grid-cols-1 gap-14 md:grid-cols-[180px_minmax(0,1fr)] md:gap-10">
-          <nav className="flex gap-6 overflow-x-auto md:sticky md:top-[220px] md:block md:self-start">
-            <a
-              href="#showreel"
-              className="block shrink-0 text-left text-[13px] text-[#0F02E6] transition-all duration-300 md:mb-4"
-            >
-              SHOWREEL
-            </a>
-          </nav>
-
-          <div>
-            <section id="showreel" className="mb-24 scroll-mt-[220px] md:mb-32">
-              <h2
-                className="mb-10 text-[clamp(2.8rem,6vw,5.8rem)] font-normal leading-[0.84] tracking-[-0.055em] text-[#0F02E6]"
-                style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}
-              >
-                SHOWREEL 2026
-              </h2>
-              <ShowreelPlayer />
-              <div className="mt-4 text-[11px] uppercase tracking-[0.14em] text-black/40">
-                02:15
-              </div>
-            </section>
-
-            <section className="mb-28">
-              <p className="max-w-[720px] text-[17px] leading-[1.55]">
-                {t.description}
-              </p>
-            </section>
-
-            <section className="mb-32 border-t border-black/20 pt-5 md:mb-40">
-              <div className="grid grid-cols-2 gap-x-8 gap-y-5 text-[12px] uppercase tracking-[0.12em] md:grid-cols-4">
-                {t.services.map((service) => (
-                  <div key={service}>{service}</div>
-                ))}
-              </div>
-            </section>
-
-            <section className="grid grid-cols-1 gap-8 border-t border-black/20 pt-5 md:grid-cols-[220px_1fr] md:gap-24">
-              <div className="text-[11px] uppercase tracking-[0.14em] text-[#0F02E6]">
-                {t.contact}
-              </div>
-              <div className="text-[12px] uppercase leading-[1.7] tracking-[0.12em]">
-                <a
-                  href="mailto:shumengli.studio@gmail.com"
-                  className="text-[#0F02E6] transition-opacity duration-200 hover:opacity-45"
-                >
-                  shumengli.studio@gmail.com
-                </a>
-                <div className="text-black/50">{t.availability}</div>
-              </div>
-            </section>
+        <section id="showreel" className="mb-24 scroll-mt-[220px] md:mb-32">
+          <h2
+            className="mb-10 text-[clamp(2.8rem,6vw,5.8rem)] font-normal leading-[0.84] tracking-[-0.055em] text-[#0F02E6]"
+            style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}
+          >
+            SHOWREEL 2026
+          </h2>
+          <div className="mx-auto w-full">
+            <ShowreelPlayer />
+            <div className="mt-4 text-[11px] uppercase tracking-[0.14em] text-black/40">
+              02:15
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section className="mb-28 md:pl-[316px]">
+          <p className="max-w-[720px] text-[17px] leading-[1.55]">
+            {t.description}
+          </p>
+        </section>
+
+        <section className="mb-32 border-t border-black/20 pt-5 md:mb-40">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-5 text-[12px] uppercase tracking-[0.12em] md:grid-cols-4">
+            {t.services.map((service) => (
+              <div key={service}>{service}</div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid grid-cols-1 gap-8 border-t border-black/20 pt-5 md:grid-cols-[220px_1fr] md:gap-24">
+          <div className="text-[11px] uppercase tracking-[0.14em] text-[#0F02E6]">
+            {t.contact}
+          </div>
+          <div className="text-[12px] uppercase leading-[1.7] tracking-[0.12em]">
+            <a
+              href="mailto:shumengli.studio@gmail.com"
+              className="text-[#0F02E6] transition-opacity duration-200 hover:opacity-45"
+            >
+              shumengli.studio@gmail.com
+            </a>
+            <div className="text-black/50">{t.availability}</div>
+          </div>
+        </section>
       </div>
     </main>
   )
