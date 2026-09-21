@@ -21,7 +21,7 @@ const Logo = ({ variant = 'landing' }: { variant?: 'landing' | 'header' }) => {
     const isLanding = variant === 'landing';
     const titleClass = isLanding
         ? 'h-25 cursor-pointer flex justify-between'
-        : 'flex h-[108px] w-[108px] cursor-pointer flex-col justify-between text-[14px] sm:text-[15px]';
+        : 'flex h-[96px] w-[96px] cursor-pointer flex-col justify-between text-[13px] sm:text-[14px]';
 
     const rowClass = isLanding
         ? 'w-25 text-center flex flex-nowrap justify-between'
