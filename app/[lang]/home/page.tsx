@@ -23,12 +23,12 @@ export default async function Home(props: {
                 >
                     <BlurText text={dictionary.sidebar[0]} link="../pages/biblio" float={true} blur={true}/>
                     <BlurText text={dictionary.sidebar[1]} link="../pages/works" float={true} blur={true}/>
-                    <BlurText text={dictionary.sidebar[2]} link="../pages/cv" float={true} blur={true}/>
-                    <BlurText text={dictionary.sidebar[3]} link="../pages/media" float={true} blur={true}/>
-                    <BlurText text={dictionary.sidebar[4]} link="../pages/contact" float={true} blur={true}/>
+                    <BlurText text={dictionary.sidebar[2]} link="../pages/composition" float={true} blur={true}/>
+                    <BlurText text={dictionary.sidebar[3]} link="../pages/cv" float={true} blur={true}/>
+                    <BlurText text={dictionary.sidebar[4]} link="../pages/media" float={true} blur={true}/>
+                    <BlurText text={dictionary.sidebar[5]} link="../pages/contact" float={true} blur={true}/>
                 </div> 
             </div>
         </div>
     );
 }
-    

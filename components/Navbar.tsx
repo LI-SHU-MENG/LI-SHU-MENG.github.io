@@ -1,31 +1,39 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '@components/Logo'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { i18n, type Locale } from '../i18n-config'
 
-const Navbar = () => {
+const Navbar = ({ dictionary }: { dictionary: any }) => {
   const pathname = usePathname()
-  const isBiography = pathname?.includes('/pages/biblio')
-  const [showControls, setShowControls] = useState(true)
+  const [showHeader, setShowHeader] = useState(true)
+  const lastScrollY = useRef(0)
+
+  const lang = pathname?.split('/')[1] || 'fr'
 
   useEffect(() => {
-    if (!isBiography) {
-      setShowControls(true)
-      return
-    }
-
     const handleScroll = () => {
-      setShowControls(window.scrollY < 80)
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY < 80) {
+        setShowHeader(true)
+      } else if (currentScrollY > lastScrollY.current) {
+        setShowHeader(false)
+      } else if (currentScrollY < lastScrollY.current) {
+        setShowHeader(true)
+      }
+
+      lastScrollY.current = currentScrollY
     }
 
+    lastScrollY.current = window.scrollY
     handleScroll()
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [isBiography])
+  }, [])
 
   const redirectedPathname = (locale: Locale) => {
     if (!pathname) return '/'
@@ -35,76 +43,72 @@ const Navbar = () => {
     return segments.join('/')
   }
 
+  const navItems = [
+    { text: dictionary.sidebar[0], link: `/${lang}/pages/biblio` },
+    { text: dictionary.sidebar[1], link: `/${lang}/pages/works` },
+    { text: dictionary.sidebar[2], link: `/${lang}/pages/composition` },
+    { text: dictionary.sidebar[3], link: `/${lang}/pages/cv` },
+    { text: dictionary.sidebar[4], link: `/${lang}/pages/media` },
+    { text: dictionary.sidebar[5], link: `/${lang}/pages/contact` },
+  ]
+
   return (
     <header
-      className={`fixed left-0 top-0 z-40 w-full bg-white transition-all duration-500 ${
-        isBiography
-          ? showControls
-            ? 'opacity-100 blur-0 pointer-events-auto'
-            : 'opacity-0 blur-[3px] pointer-events-none'
-          : 'opacity-100 blur-0 pointer-events-auto'
+      className={`fixed left-0 top-0 z-50 w-full bg-white transition-all duration-500 ${
+        showHeader
+          ? 'translate-y-0 opacity-100 pointer-events-auto'
+          : '-translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <nav
-        className="relative mx-auto flex h-[220px] w-full items-center justify-center bg-white"
-        aria-label="Global"
-      >
-        {/* Logo 始终居中并保持显示 */}
-        <div className="z-50 text-sm">
+      <div className="mx-auto flex h-[184px] w-full flex-col bg-white px-3 sm:px-6 md:px-10">
+        <div className="flex h-[126px] shrink-0 items-center justify-center overflow-hidden">
           <Logo />
         </div>
 
-        {/* Biography 页面：语言栏在 Logo 右边 */}
-        {isBiography && (
-          <div
-            className={`absolute right-12 top-1/2 z-50 flex -translate-y-1/2 flex-row gap-3
-              transition-all duration-500
-              ${
-                showControls
-                  ? 'opacity-100 blur-0 pointer-events-auto'
-                  : 'opacity-0 blur-[3px] pointer-events-none'
-              }`}
+        <div className="flex h-[58px] min-w-0 items-center justify-between gap-3 pb-3 text-[10px] sm:gap-6 sm:text-[12px] md:text-[13px]">
+          <nav
+            className="flex min-w-0 items-baseline gap-3 overflow-x-auto whitespace-nowrap sm:gap-4 md:gap-6"
+            aria-label="Global"
           >
-            {i18n.locales.map((locale) => (
-              <div key={locale}>
+            {navItems.map((item) => {
+              const normalizedPath = pathname?.replace(/\/$/, '')
+              const normalizedLink = item.link.replace(/\/$/, '')
+              const active =
+                normalizedPath === normalizedLink ||
+                (normalizedLink.endsWith('/pages/works') &&
+                  normalizedPath?.startsWith(`${normalizedLink}/`))
+
+              return (
                 <Link
-                  href={redirectedPathname(locale)}
-                  className={`transition-all duration-300 ${
-                    pathname.startsWith(`/${locale}`)
-                      ? 'blur-0'
-                      : 'blur-[1.5px] hover:blur-0'
+                  key={item.link}
+                  href={item.link}
+                  className={`shrink-0 transition-all duration-300 ${
+                    active ? 'blur-0' : 'blur-[2.4px] hover:blur-0'
                   }`}
                 >
-                  {locale === 'cn' ? '中' : locale.toUpperCase()}
+                  {item.text}
                 </Link>
-              </div>
-            ))}
-          </div>
-        )}
+              )
+            })}
+          </nav>
 
-        {/* 其他页面的语言栏 */}
-        {!isBiography && (
-          <div className="absolute right-6 top-1/2 z-50 flex -translate-y-1/2 flex-row gap-4 sm:right-20">
+          <div className="flex shrink-0 items-baseline gap-2 whitespace-nowrap sm:gap-3">
             {i18n.locales.map((locale) => (
-              <div key={locale}>
-                <Link
-                  href={redirectedPathname(locale)}
-                  className={`transition-all duration-300 ${
-                    pathname.startsWith(`/${locale}`)
-                      ? 'blur-0'
-                      : 'blur-[1.5px] hover:blur-0'
-                  }`}
-                >
-                  {locale === 'cn' ? '中' : locale.toUpperCase()}
-                </Link>
-              </div>
+              <Link
+                key={locale}
+                href={redirectedPathname(locale)}
+                className={`transition-all duration-300 ${
+                  pathname.startsWith(`/${locale}`)
+                    ? 'blur-0'
+                    : 'blur-[1.5px] hover:blur-0'
+                }`}
+              >
+                {locale === 'cn' ? '中' : locale.toUpperCase()}
+              </Link>
             ))}
           </div>
-        )}
-      </nav>
-
-      {/* 横线永远在 Logo 区域下方 */}
-      
+        </div>
+      </div>
     </header>
   )
 }
