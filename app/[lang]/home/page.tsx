@@ -15,7 +15,7 @@ export default async function Home(props: {
                 <div
                     className={`mx-auto flex w-[92vw] items-center justify-center whitespace-nowrap text-center gap-[clamp(0.5rem,1.4vw,2rem)] ${
                         lang === 'fr'
-                            ? 'text-[clamp(2.2rem,3.1vw,3.4rem)]'
+                            ? 'text-[clamp(1.9rem,2.65vw,3rem)]'
                             : lang === 'en'
                                 ? 'text-[clamp(1.9rem,2.65vw,3rem)]'
                                 : 'text-6xl'
