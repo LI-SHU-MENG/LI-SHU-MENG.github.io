@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { i18n, type Locale } from '../i18n-config'
 
-const Navbar = ({ dictionary }: { dictionary: any }) => {
+const Navbar = ({ dictionary, showNav = true }: { dictionary: any; showNav?: boolean }) => {
   const pathname = usePathname()
   const [showHeader, setShowHeader] = useState(true)
   const lastScrollY = useRef(0)
@@ -62,10 +62,11 @@ const Navbar = ({ dictionary }: { dictionary: any }) => {
     >
       <div className="mx-auto flex h-[184px] w-full flex-col bg-white px-3 sm:px-6 md:px-10">
         <div className="flex h-[126px] shrink-0 items-center justify-center overflow-hidden">
-          <Logo />
+          <Logo variant="header" />
         </div>
 
         <div className="flex h-[58px] min-w-0 items-center justify-between gap-3 pb-3 text-[10px] sm:gap-6 sm:text-[12px] md:text-[13px]">
+          {showNav ? (
           <nav
             className="flex min-w-0 items-baseline gap-3 overflow-x-auto whitespace-nowrap sm:gap-4 md:gap-6"
             aria-label="Global"
@@ -91,6 +92,9 @@ const Navbar = ({ dictionary }: { dictionary: any }) => {
               )
             })}
           </nav>
+          ) : (
+            <div aria-hidden="true" />
+          )}
 
           <div className="flex shrink-0 items-baseline gap-2 whitespace-nowrap sm:gap-3">
             {i18n.locales.map((locale) => (
