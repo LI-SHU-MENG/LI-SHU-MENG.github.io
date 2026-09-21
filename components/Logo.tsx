@@ -21,7 +21,7 @@ const Logo = ({ variant = 'landing' }: { variant?: 'landing' | 'header' }) => {
     const isLanding = variant === 'landing';
     const titleClass = isLanding
         ? 'flex h-[20vw] w-[20vw] min-h-[150px] min-w-[150px] max-h-[260px] max-w-[260px] cursor-pointer flex-col justify-between text-[clamp(24px,3vw,44px)]'
-        : 'flex h-[84px] w-[96px] scale-[0.72] cursor-pointer flex-col justify-between text-[13px] sm:text-sm';
+        : 'flex h-[100px] w-[132px] cursor-pointer flex-col justify-between text-[14px] sm:text-[15px]';
 
     const rowClass = 'flex w-full flex-nowrap justify-between text-center';
 
